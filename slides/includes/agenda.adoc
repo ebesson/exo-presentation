@@ -1,0 +1,12 @@
+= Agenda
+
+image::keep_calm.jpg["Keep calm and stay focus",height=550]
+
+
+= Agenda (suite)
+
+* Architecture & Workflow
+* L'application PetClinic
+* Points d'attentions
+* Démo
+* Perspectives

@@ -1,0 +1,16 @@
+[{invert}]
+= Demo 
+
+
+== Demo
+
+image::demo.jpg["Demo",height=450]
+
+[NOTE.speaker]
+--
+* Allez dans le repertoire: j pet
+* Démarrer l'application : ./mvnw spring:boot run
+* Dans un autre terminal : j pet
+* Lancer les tests de charges: ./mvnw gatling:test -Dgatling.simulationClass=petclinic.PetsSimulation -Pload
+--
+

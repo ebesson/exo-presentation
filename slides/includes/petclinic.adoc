@@ -1,0 +1,3 @@
+[{invert}]
+= L'application PetClinic
+

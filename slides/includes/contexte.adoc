@@ -1,0 +1,33 @@
+[{invert}]
+= Contexte
+
+== Pourquoi parler de performance ?
+
+4 seuils pour le chargement d'une page web :
+
+* Moins de 100ms 
+* Moins d’une seconde
+* Plus d’une seconde
+* Plus de 10 secondes
+
+[NOTE.speaker]
+--
+Des recherches ont été menée et on définie 4 seuils de perceptions :
+
+    * Moins de 100ms => le délai n’est pas perceptible
+    * Moins d’une seconde => le délai est perceptible, mais l’utilisateur suppose que le traitement est en cours et que ce n’est pas anormal
+    * Plus d’une seconde => on perd la sensation de rapidité
+    * Plus de 10 secondes => on a perdu l’essentiel de l’attention de l’utilisateur. Même s’il n’abandonne pas son action, il risque d’avoir oublié une partie du contexte associé, et la reprise de l’action en cours risque d’être problématique.
+--
+
+== Pourquoi parler de performance ?
+
+
+image::amazon.svg["Amazon",height=250]
+
+
+[NOTE.speaker]
+--
+100 ms de temps de chargement supplémentaire, 1% de vente en moins pour Amazon.
+--
+

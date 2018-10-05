@@ -1,0 +1,59 @@
+
+= Boilerplate pour dimensionner les services Java
+include::./includes/attributes.adoc[]
+
+// //// Speaker Slide and Company slide
+== Whoami
+
+* Etienne BESSON:
+** Ingénieur DevOps @ link:https://b-com.com/[b<>com]
+* link:https://twitter.com/etienne_besson[icon:twitter[] @etienne_besson]
+* link:https://github.com/ebesson[icon:github[] ebesson]
+
+image::etienne.jpg[height=200]
+
+[NOTE.speaker]
+--
+Actually things aren't that bad
+--
+
+== Mon positionement
+
+image::devops-process.png["Process Devops",height=450]
+
+// ///////////////////////
+// Include chapter here with a blank line between each
+// Notice the offset to have chapters as autonomous documents
+// ///////////////////////
+:leveloffset: +1
+
+include::./includes/contexte.adoc[]
+
+include::./includes/agenda.adoc[]
+
+include::./includes/architecture_et_workflow.adoc[]
+
+include::./includes/petclinic.adoc[]
+
+include::./includes/points_attentions.adoc[]
+
+include::./includes/demo.adoc[]
+
+include::./includes/perspectives.adoc[]
+
+:leveloffset: -1
+
+== Merci !
+
+image::Thats_all_folks.png["Merci", height=550]
+
+
+== Questions
+
+image::questions.jpg["Questions", height=550]
+
+== Présentation
+
+image::qrcode.svg["QRCode to this presentation",height=250]
+
+Sources (slides & exemple) : link:https://github.com/ebesson/exo-presentation[]
