@@ -1,0 +1,59 @@
+= Boilerplate pour dimensionner les services java
+
+Afin de s’assurer de la stabilité des services tout en optimisant l’utilisation des ressources sur les différentes plateformes, nous avons besoins d’un banc de test pour dimensionner les services java.
+
+== Étude demandée
+Nous vous demandons de réaliser quatres choses:
+
+1. Une courte présentation technique décrivant l’architecture et les workflows que vous mettriez en place pour répondre à ce besoin
+2. Lister, selon vous, les points importants à scruter et les principales clés de configuration à tester
+3. Un prototype de banc de test ciblant une application springboot /rest (ex: spring-petclinic-rest), utilisant une base de données (qui n’est pas la cible du tests de charge, mais qui permet de se rapprocher d’un environnement de production)
+4. Une courte documentation explicative que vous mettriez à disposition des développeurs pour diffuser cette pratique.
+
+== Contenu de ce dépôt
+
+* la présentation (visible https://ebesson.github.io/exo-presentation/#/|[ici])
+* un exemple complet avec `spring-petclinic-rest` dans le répertoire `sample`
+ 
+== Comment travailler avec ce dépôt
+
+=== Outils
+
+* Vous avez besoin de :
+** Docker CE 18.05+
+** Docker-compose dans votre PATH
+** GNU Make dans votre PATH
+
+== Génréation de la présenten slides
+
+* Si vous voulez générer la présentation :
+** Cloner ce dépôt
+** Lancer la commande `make` command:
++
+[source,bash]
+----
+make build
+----
+
+** Le résultat est dans: `./dist/index.html`
+
+== Explorer l'application 
+
+** Cloner ce dépôt
+** Aller dans repertoire `sample\spring-petclinic-rest`
+** Lancer la génération de la documentation par la commande:
+
++
+[source,bash]
+----
+./mvnw org.asciidoctor:asciidoctor-maven-plugin:process-asciidoc -Pdoc
+----
+
+** Le résultat est dans: `./dist/index.html`
+** Pour afficher la documentation:
+
++
+[source,bash]
+----
+firefox target/docs/index.html
+----
