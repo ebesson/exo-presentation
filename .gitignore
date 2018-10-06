@@ -9,6 +9,6 @@ target/*
 .project
 .idea
 *.iml
-/target
+target/
 
 generated/
