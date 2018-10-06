@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Boilerplate pour dimensionner les services Java</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="./reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="./styles/build.css" id="theme"><link rel="stylesheet" href="styles/font-awesome.min.css"><link href="./reveal.js/plugin/highlight/styles/github.min.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "./reveal.js/css/print/pdf.css" : "./reveal.js/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="./reveal.js/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Boilerplate pour dimensionner les services Java</h1></section><section id="whoami"><h2>Whoami</h2><div class="ulist"><ul><li><p>Etienne BESSON:</p><div class="ulist"><ul><li><p>Ingénieur DevOps @ <a href="https://b-com.com/">b&lt;&gt;com</a></p></li></ul></div></li><li><p><a href="https://twitter.com/etienne_besson"><span class="icon"><i class="fa fa-twitter"></i></span> @etienne_besson</a></p></li><li><p><a href="https://github.com/ebesson"><span class="icon"><i class="fa fa-github"></i></span> ebesson</a></p></li></ul></div>
+<div class="imageblock" style=""><img src="images/etienne.jpg" alt="etienne" height="200"></div>
+<aside class="notes"><div class="paragraph"><p>Actually things aren&#8217;t that bad</p></div></aside></section>
+<section id="mon_positionement"><h2>Mon positionement</h2><div class="imageblock" style=""><img src="images/devops-process.png" alt="Process Devops" height="450"></div></section>
+<section><section id="contexte" data-background-color="rgb(89, 89, 89)" data-state="invert"><h2>Contexte</h2></section><section id="pourquoi_parler_de_performance"><h2>Pourquoi parler de performance ?</h2><div class="paragraph"><p>4 seuils pour le chargement d&#8217;une page web :</p></div>
+<div class="ulist"><ul><li><p>Moins de 100ms</p></li><li><p>Moins d’une seconde</p></li><li><p>Plus d’une seconde</p></li><li><p>Plus de 10 secondes</p></li></ul></div>
+<aside class="notes"><div class="paragraph"><p>Des recherches ont été menée et on définie 4 seuils de perceptions :</p></div>
+<div class="ulist"><ul><li><p>Moins de 100ms &#8658; le délai n’est pas perceptible</p></li><li><p>Moins d’une seconde &#8658; le délai est perceptible, mais l’utilisateur suppose que le traitement est en cours et que ce n’est pas anormal</p></li><li><p>Plus d’une seconde &#8658; on perd la sensation de rapidité</p></li><li><p>Plus de 10 secondes &#8658; on a perdu l’essentiel de l’attention de l’utilisateur. Même s’il n’abandonne pas son action, il risque d’avoir oublié une partie du contexte associé, et la reprise de l’action en cours risque d’être problématique.</p></li></ul></div></aside></section><section id="pourquoi_parler_de_performance_2"><h2>Pourquoi parler de performance ?</h2><div class="imageblock" style=""><img src="images/amazon.svg" alt="Amazon" height="250"></div>
+<aside class="notes"><div class="paragraph"><p>100 ms de temps de chargement supplémentaire, 1% de vente en moins pour Amazon.</p></div></aside></section></section>
+<section id="agenda"><h2>Agenda</h2><div class="imageblock" style=""><img src="images/keep_calm.jpg" alt="Keep calm and stay focus" height="550"></div></section>
+<section id="agenda_suite"><h2>Agenda (suite)</h2><div class="ulist"><ul><li><p>Architecture &amp; Workflow</p></li><li><p>L&#8217;application PetClinic</p></li><li><p>Points d&#8217;attentions</p></li><li><p>Démo</p></li><li><p>Perspectives</p></li></ul></div></section>
+<section id="architecture_workflow" data-background-color="rgb(89, 89, 89)" data-state="invert"><h2>Architecture &amp; Workflow</h2></section>
+<section id="l_application_petclinic" data-background-color="rgb(89, 89, 89)" data-state="invert"><h2>L&#8217;application PetClinic</h2></section>
+<section id="points_d_attentions" data-background-color="rgb(89, 89, 89)" data-state="invert"><h2>Points d&#8217;attentions</h2></section>
+<section><section id="demo" data-background-color="rgb(89, 89, 89)" data-state="invert"><h2>Demo</h2></section><section id="demo_2"><h2>Demo</h2><div class="imageblock" style=""><img src="images/demo.jpg" alt="Demo" height="450"></div>
+<aside class="notes"><div class="ulist"><ul><li><p>Allez dans le repertoire: j pet</p></li><li><p>Démarrer l&#8217;application : ./mvnw spring:boot run</p></li><li><p>Dans un autre terminal : j pet</p></li><li><p>Lancer les tests de charges: ./mvnw gatling:test -Dgatling.simulationClass=petclinic.PetsSimulation -Pload</p></li></ul></div></aside></section></section>
+<section><section id="perspectives" data-background-color="rgb(89, 89, 89)" data-state="invert"><h2>Perspectives</h2><div class="imageblock" style=""><img src="images/toy_story.png" alt="To inifinty and beyond" width="450"></div></section><section id="intgration_continue"><h2>Intégration continue</h2><div class="ulist"><ul><li><p>Déploiement sur la plateforme de bench</p></li><li><p>Intégration des tests de performances au pipeline</p></li><li><p>Historisation des résultats</p></li><li><p>Mise en place de dashboard par API / application</p></li></ul></div>
+<div class="imageblock" style=""><img src="images/pipeline.jpg" alt="Pipeline" width="450"></div></section><section id="partages_des_connaissances"><h2>Partages des connaissances</h2><div class="ulist"><ul><li><p>Workshop : "Les mains dans le cambouis"</p></li><li><p>Espace wiki dédié</p></li><li><p>Création d&#8217;un arechetype Maven</p></li></ul></div>
+<div class="imageblock" style=""><img src="images/craftman.jpg" alt="Craftman" width="450"></div></section></section>
+<section id="merci"><h2>Merci !</h2><div class="imageblock" style=""><img src="images/Thats_all_folks.png" alt="Merci" height="550"></div></section>
+<section id="questions"><h2>Questions</h2><div class="imageblock" style=""><img src="images/questions.jpg" alt="Questions" height="550"></div></section>
+<section id="prsentation"><h2>Présentation</h2><div class="imageblock" style=""><img src="images/qrcode.svg" alt="QRCode to this presentation" height="250"></div>
+<div class="paragraph"><p>Sources (slides &amp; exemple) : <a href="https://github.com/ebesson/exo-presentation" class="bare">https://github.com/ebesson/exo-presentation</a></p></div></section></div></div><script src="./reveal.js/lib/js/head.min.js"></script><script src="./reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Set a per-slide timing for speaker notes, null means none
+  defaultTiming: null,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'black',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 1280,
+  height: 800,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: './reveal.js/plugin/notes/notes.js', async: true }
+  ]
+});</script></body></html>
