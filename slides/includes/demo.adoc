@@ -1,13 +1,18 @@
 [{invert}]
 = Demo 
 
+image::demo.jpg["Demo",height=450]
+
+
 
 == Demo
 
-image::demo.jpg["Demo",height=450]
+image::Parental_Advisory.png["Parental Advisory",height=450]
+
 
 [NOTE.speaker]
 --
+* Je lance tous en local sur machine : ça ne réflète pas la réalité
 * Allez dans le repertoire: j pet
 * Démarrer l'application : ./mvnw spring:boot run
 * Dans un autre terminal : j pet

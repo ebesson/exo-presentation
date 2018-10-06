@@ -2,7 +2,6 @@
 = Boilerplate pour dimensionner les services Java
 include::./includes/attributes.adoc[]
 
-// //// Speaker Slide and Company slide
 == Whoami
 
 * Etienne BESSON:
@@ -31,9 +30,9 @@ include::./includes/contexte.adoc[]
 
 include::./includes/agenda.adoc[]
 
-include::./includes/architecture_et_workflow.adoc[]
-
 include::./includes/petclinic.adoc[]
+
+include::./includes/architecture_et_workflow.adoc[]
 
 include::./includes/points_attentions.adoc[]
 
@@ -46,7 +45,6 @@ include::./includes/perspectives.adoc[]
 == Merci !
 
 image::Thats_all_folks.png["Merci", height=550]
-
 
 == Questions
 

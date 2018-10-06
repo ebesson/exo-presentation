@@ -1,12 +1,17 @@
 = Agenda
 
-image::keep_calm.jpg["Keep calm and stay focus",height=550]
+image::keep_calm.jpg["Keep calm and stay focus",height=650]
+[NOTE.speaker]
+--
+Le but de cette présentation vous présenter une démarche possible avec un cas concret
+--
+
 
 
 = Agenda (suite)
 
-* Architecture & Workflow
 * L'application PetClinic
+* Architecture & Workflow
 * Points d'attentions
 * Démo
 * Perspectives

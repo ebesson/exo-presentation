@@ -31,3 +31,11 @@ image::amazon.svg["Amazon",height=250]
 100 ms de temps de chargement supplémentaire, 1% de vente en moins pour Amazon.
 --
 
+
+== Pour vérifier les performances ?
+image::affiche-tester-c-est-douter.jpg["Tester, c'est douter...",height=650]
+
+[NOTE.speaker]
+--
+La seule solution pour vérifier les performances: c'est tester !!!
+--

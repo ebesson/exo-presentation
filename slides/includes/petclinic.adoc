@@ -1,3 +1,21 @@
 [{invert}]
 = L'application PetClinic
 
+== API Rest Java "Standard"
+
+image::application.png["Vue swagger",height=650]
+
+[NOTE.speaker]
+--
+Application Spring boot
+--
+
+
+== Architecture de l'application
+
+image::architecture.png["Architecture",height=650]
+
+[NOTE.speaker]
+--
+Application Spring boot
+--
