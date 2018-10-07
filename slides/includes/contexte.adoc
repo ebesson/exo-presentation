@@ -5,6 +5,7 @@
 
 4 seuils pour le chargement d'une page web :
 
+[%step]
 * Moins de 100ms 
 * Moins d’une seconde
 * Plus d’une seconde

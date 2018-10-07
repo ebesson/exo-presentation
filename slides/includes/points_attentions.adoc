@@ -1,2 +1,68 @@
 [{invert}]
 = Points d'attentions
+
+== Plateforme de tests 
+
+[%step]
+* Dimensionnement Machine & Réseau 
+* Base de données
+* Imbrication jeux de tests & données
+* Autres middlewares
+* Un tir à la fois
+* => Destruire et créer cet environnement
+
+image::warning.jpg["Warning",height=250]
+
+[NOTE.speaker]
+--
+* Dimensionnement Machine & Réseau : comme en prod => peut être goûteux et difficle
+* Base de données : tests destructifs, volumétrie des données, qualités des données
+* Imbrication jeux de tests & données : maintient dans le temps 
+* Autre middleware : cache http, reverse proxy ?
+* Un tir à la fois : 
+* => Destruire et et créer cet environnement : terrain de jeux pour tester le déploiements
+--
+
+
+== Application
+
+[%step]
+* Conteneur de servlet
+* Persistance
+* Authentification
+* Cache
+* Monitoring
+
+image::warning.jpg["Warning",height=250]
+
+[NOTE.speaker]
+--
+
+* Conteneur de servlet : Tomacat / Jetty / Undertow 2
+* Persistance : 
+    JPA / JDBC / Spring Data et tuning connection à la DB
+* Persistance : LazyLoading vs Eagger
+* Pagination des listes
+* Authentification : avec et sans => Impact session HTTP
+* Cache : gestion du cache Ehcache et cache hibernate
+* Monitoring : niveau de log / déactiver JMX
+--
+
+
+== Pour allez plus loin
+
+[%step]
+* Tuning SQL
+* Profiling de l'application
+* Tuning de la plateforme
+* Impact sur le SLA
+
+image::aller_plus_loin.jpg["Allez plus loin",height=250]
+
+[NOTE.speaker]
+--
+
+* Tuning SQL : récriture de requêtes SQL / analyse du plan d'éxécution / pose d'index
+* Profiling de l'application : visualVM / YourKit => Deadlock , etc...
+* Tuning de la plateforme: customisation système / hardware / middleware (cache / RP)
+--

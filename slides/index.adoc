@@ -11,12 +11,7 @@ include::./includes/attributes.adoc[]
 
 image::etienne.jpg[height=200]
 
-[NOTE.speaker]
---
-Actually things aren't that bad
---
-
-== Mon positionement
+== Mon positionnement
 
 image::devops-process.png["Process Devops",height=450]
 

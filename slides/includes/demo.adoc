@@ -1,14 +1,9 @@
 [{invert}]
 = Demo 
 
-image::demo.jpg["Demo",height=450]
-
-
-
-== Demo
+== Gatling et spring-pet-clinic
 
 image::Parental_Advisory.png["Parental Advisory",height=450]
-
 
 [NOTE.speaker]
 --
@@ -19,3 +14,19 @@ image::Parental_Advisory.png["Parental Advisory",height=450]
 * Lancer les tests de charges: ./mvnw gatling:test -Dgatling.simulationClass=petclinic.PetsSimulation -Pload
 --
 
+
+== Documentation
+
+image::writing_document.jpg["Ecrire de la documentation"]
+[NOTE.speaker]
+--
+[source,bash]
+----
+j pet
+./mvnw org.asciidoctor:asciidoctor-maven-plugin:process-asciidoc -Pdoc 
+firefox target/docs/index.html
+
+./mvnw org.asciidoctor:asciidoctor-maven-plugin:process-asciidoc -Pdoc -Ddocumentation.format=pdf
+firefox target/docs/index.pdf
+----
+--

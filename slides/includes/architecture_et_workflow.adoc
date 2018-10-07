@@ -1,2 +1,66 @@
 [{invert}]
 = Architecture & Workflow
+
+== Principe d'un test de charge
+
+image::load_test.png["Principe",height=450]
+
+[NOTE.speaker]
+--
+Injecteur : c'est lui qui lance les requêtes vers l'application
+Application à tester : application déployée sur une autre machine
+--
+
+
+== Gatling
+
+image::gatling.png["Gatling",height=450]
+
+[NOTE.speaker]
+--
+Description : 
+
+* Framework opensource pour des tests de charge
+* Sous le capot :
+** Scala
+** Netty
+** Akka
+* Enregistre
+--
+
+== Exemple
+
+[.stretch]
+image::PetsSimulation.png["Exemple de simulation"]
+
+[NOTE.speaker]
+--
+Description : 
+
+* Framework opensource pour des tests de charge
+* Sous le capot :
+** Scala
+** Netty
+** Akka
+* Enregistremn
+--
+
+== Workflow à tester
+
+[%step]
+* Conteneur de servlet
+* Persistance
+* Authentification
+* Cache
+
+image::workflow.jpg["Workflow",height=300]
+
+[NOTE.speaker]
+--
+Description : 
+* Conteneur de servlet : Tomacat / Jetty / Undertow 2
+* Persistance : JPA / JDBC / Spring Data
+* Authentification : avec et sans
+* Cache : gestion du cache Ehcache et cache hibernate
+--
+
