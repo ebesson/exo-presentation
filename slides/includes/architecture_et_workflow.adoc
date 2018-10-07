@@ -31,7 +31,7 @@ Description :
 == Exemple
 
 [.stretch]
-image::PetsSimulation.png["Exemple de simulation"]
+image::PetsSimulation.png["Exemple de simulation",height=500]
 
 [NOTE.speaker]
 --
