@@ -235,6 +235,7 @@
                                 <!--<imagesdir>./images</imagesdir>-->
                                 <!--<allow-uri-read>true</allow-uri-read>-->
                                 <toc />
+								<toclevels>3</toclevels>
                             </attributes>
                         </configuration>
                     </plugin>
